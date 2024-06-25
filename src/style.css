@@ -8,6 +8,11 @@ h1 {
   font-family: 'Roboto Mono', Menlo, monospace;
 }
 
+.photo-and-name {
+  align-items: center;
+  margin-bottom: 16px;
+}
+
 .photo-and-name>img {
   height: 120px;
   width: 120px;
