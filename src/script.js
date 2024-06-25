@@ -1,4 +1,3 @@
-let posts = [];
 const postsContainer = document.getElementById("post-container");
 
 fetch('https://scrapbook.hackclub.com/api/users/NguyễnGiaBách')
@@ -9,8 +8,7 @@ fetch('https://scrapbook.hackclub.com/api/users/NguyễnGiaBách')
     return response.json();
   })
   .then(data => {
-    posts = data.posts;
-    renderScrapbook(posts);
+    renderScrapbook(data.posts);
   })
   .catch(error => {
     console.error('There was a problem with the fetch operation:', error);
@@ -27,14 +25,18 @@ function renderScrapbook(posts) {
   }
 
   if (posts[0]) {
-    const post = document.createElement("div");
-    postsContainer.appendChild(post);
     console.log(posts[0]);
+    const post = document.createElement("div");
+    post.innerHTML = postForm(post[0].text);
+    postsContainer.appendChild(post);
+
   }
 
   if (posts[1]) {
-    const post = document.createElement("div");
-    postsContainer.appendChild(post);
     console.log(posts[1]);
+    const post = document.createElement("div");
+    post.innerHTML = postForm(post[1].text);
+    postsContainer.appendChild(post);
+
   }
 }
