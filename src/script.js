@@ -18,5 +18,13 @@ fetch('https://scrapbook.hackclub.com/api/users/NguyễnGiaBách')
 
 function renderScrapbook(posts) {
   console.log(posts, postsContainer);
+
+  if (posts[0]) {
+    console.log(posts[0]);
+  }
+
+  if (posts[1]) {
+    console.log(posts[1]);
+  }
   // document.write('<html><body><h2>HTML</h2></body></html>');
 }
