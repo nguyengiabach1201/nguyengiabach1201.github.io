@@ -22,20 +22,34 @@ function renderScrapbook(posts) {
     for (let i = 0; i < attachments.length; i++) {
       imgs += `<img src="${attachments[i]}" alt="Attachment" id="pic-${i}" />\n`;
     };
+    let date = "";
     
     return (
-      `<h1>Test<h1/><p>${text}<p/>${imgs}`
+      `<div>
+        <h1>${date}</h1>
+        <p>${text}</p>
+        <p>${imgs}</p>
+      </div>`
     );
+  }
+
+  function fromHTML(html, trim = true) {
+    html = trim ? html.trim() : html;
+    if (!html) return null;
+
+    const template = document.createElement('template');
+    template.innerHTML = html;
+    const result = template.content.children;
+
+    if (result.length === 1) return result[0];
+    return result;
   }
 
   for (let i = 0; i < 2; i++)
   {  
     if (posts[i]) {
       console.log(posts[i]);
-      const post = document.createElement("div");
-      posts[i].text = posts[i].text.replace("\n", "<br /><br />");
-      console.log(parser.parseFromString(postForm(posts[i].text, posts[i].attachments), "text/html"));
-      post.innerHTML = parser.parseFromString(parser.parseFromString(postForm(posts[i].text, posts[i].attachments), "text/html"), "text/html");
+      const post = fromHTML(postForm(posts[i].text, posts[i].attachments));
       postsContainer.appendChild(post);
     }
   }
