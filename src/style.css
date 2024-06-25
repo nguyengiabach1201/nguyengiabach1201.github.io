@@ -85,7 +85,7 @@ i {
   }
 }
 
-.container>#post-container>div>p:has(img) {
+.container>#post-container>div>p:has(#pic-1) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;

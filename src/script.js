@@ -1,4 +1,5 @@
 const postsContainer = document.getElementById("post-container");
+const parser = new DOMParser();
 
 fetch('https://scrapbook.hackclub.com/api/users/NguyễnGiaBách')
   .then(response => {
@@ -19,12 +20,11 @@ function renderScrapbook(posts) {
   const postForm = (text, attachments) => {
     let imgs = "";
     for (let i = 0; i < attachments.length; i++) {
-      imgs += `<img src="${attachments[i]}" alt="Attachment" />\n`;
+      imgs += `<img src="${attachments[i]}" alt="Attachment" id="pic-${i}" />\n`;
     };
     
     return (
-      `<p>${text}<p/>
-      ${imgs}`
+      `<h1>Test<h1/><p>${text}<p/>${imgs}`
     );
   }
 
@@ -34,7 +34,8 @@ function renderScrapbook(posts) {
       console.log(posts[i]);
       const post = document.createElement("div");
       posts[i].text = posts[i].text.replace("\n", "<br /><br />");
-      post.innerHTML = postForm(posts[i].text, posts[i].attachments);
+      console.log(parser.parseFromString(postForm(posts[i].text, posts[i].attachments), "text/html"));
+      post.innerHTML = parser.parseFromString(parser.parseFromString(postForm(posts[i].text, posts[i].attachments), "text/html"), "text/html");
       postsContainer.appendChild(post);
     }
   }
