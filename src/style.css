@@ -81,6 +81,12 @@ i {
   }
 }
 
+.container>#post-container>div>p:has(img) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
 .container>#post-container>div>p>img {
   width: 100%;
   border-radius: 8px;

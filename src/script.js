@@ -18,9 +18,9 @@ function renderScrapbook(posts) {
   console.log(posts, postsContainer);
   const postForm = (text, attachments) => {
     let imgs = "";
-    attachments.forEach((attachment)=>{
-      imgs += `<img src="${attachment}" alt="Attachment" />\n`;
-    });
+    for (let i = 0; i < attachments.length; i++) {
+      imgs += `<img src="${attachments[i]}" alt="Attachment" />\n`;
+    };
     
     return (
       `<p>${text}<p/>
