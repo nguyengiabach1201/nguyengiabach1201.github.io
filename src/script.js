@@ -18,25 +18,22 @@ function renderScrapbook(posts) {
   console.log(posts, postsContainer);
   const postForm = (text) => {
     return (
-      `<div>
-        <p>${text}<p/>
-      <div/>`
+      `<p>${text}<p/>`
     );
   }
 
   if (posts[0]) {
-    console.log(posts[0]);
+    console.log(posts[0].text);
     const post = document.createElement("div");
-    post.innerHTML = postForm(post[0].text);
+    post.innerHTML = postForm(posts[0].text.replace("\n", "<br />"));
     postsContainer.appendChild(post);
 
   }
 
-  if (posts[1]) {
-    console.log(posts[1]);
-    const post = document.createElement("div");
-    post.innerHTML = postForm(post[1].text);
-    postsContainer.appendChild(post);
-
-  }
+  // if (posts[1]) {
+  //   console.log(posts[1]);
+  //   const post = document.createElement("div");
+  //   post.innerHTML = postForm(posts[1].text);
+  //   postsContainer.appendChild(post);
+  // }
 }

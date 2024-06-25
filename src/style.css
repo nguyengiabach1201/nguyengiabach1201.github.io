@@ -6,7 +6,6 @@ html {
 section,
 .container {
   font-family: 'Roboto Mono', Menlo, monospace;
-  text-align: center;
   width: 100%;
   max-width: 600px;
   margin: auto;
@@ -22,6 +21,7 @@ p {
 .photo-and-name {
   align-items: center;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .photo-and-name>img {
@@ -47,4 +47,9 @@ section>p>a {
 i {
   color: black;
   font-size: 20px;
+}
+
+.container>.post-container>div {
+  margin: 3rem;
+  width: calc(50% - 6rem);
 }
