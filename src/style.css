@@ -7,27 +7,6 @@ html {
   height: 2rem;
 }
 
-#bg-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin: 0;
-  width: 100vw;
-  height: 100vw;
-
-  position: static;
-  top: 0;
-  left: 0;
-}
-
-#bg-grid>div {
-  margin: 0;
-  height: calc(100vh / 5);
-}
-
-#bg-grid>div:not(:hover) {
-  background-color: gray;
-}
-
 .copyright {
   text-align: center;
   padding-bottom: 3px;
