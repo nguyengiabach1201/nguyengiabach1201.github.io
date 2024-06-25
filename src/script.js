@@ -25,7 +25,10 @@ function renderScrapbook(posts) {
     let date = formatTimestamp(timestamp);
     let emojis = ""
     for (let i = 0; i < reactions.length; i++) {
-        emojis += `<img src="${reactions[i]}" alt="Attachment" id="pic-${i}" />\n`;
+      if (reactions[i].url)
+        emojis += `<img src="${reactions[i].url}" alt="Reactions" />\n`;
+      else if (reactions[i].char)
+        emojis += `<p>${reactions[i].char}</p>\n`;
     };
     
     return (
