@@ -40,3 +40,9 @@ section>p>a {
   -ms-user-select: none;
   user-select: none;
 }
+
+i {
+  color: black;
+  width: 30px;
+  height: 30px;
+}
