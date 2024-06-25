@@ -55,6 +55,12 @@ i {
   margin: auto;
 }
 
+.container>#post-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
 .container>#post-container>div {
   margin: 3rem;
   padding: 15px;
@@ -63,8 +69,6 @@ i {
   border: 1px solid lightgrey;
 }
 
-.container>#post-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+.container>#post-container>div>img {
+  width: calc(100% - 30px);
 }
