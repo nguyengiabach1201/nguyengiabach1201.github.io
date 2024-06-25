@@ -17,20 +17,30 @@ fetch('https://scrapbook.hackclub.com/api/users/NguyễnGiaBách')
 
 function renderScrapbook(posts) {
   console.log(posts, postsContainer);
-  const postForm = (text, attachments) => {
+  const postForm = (text, attachments, timestamp) => {
     let imgs = "";
     for (let i = 0; i < attachments.length; i++) {
       imgs += `<img src="${attachments[i]}" alt="Attachment" id="pic-${i}" />\n`;
     };
-    let date = "";
+    let date = formatTimestamp(timestamp);
     
     return (
       `<div>
-        <h1>${date}</h1>
+        <h2>${date}</h2>
         <p>${text}</p>
         <p>${imgs}</p>
       </div>`
     );
+  }
+
+  function formatTimestamp(timestamp) {
+    const date = new Date(timestamp * 1000); // Multiply by 1000 for milliseconds
+    const options = {
+      weekday: 'short',
+      month: 'short',
+      day: 'numeric'
+    };
+    return new Intl.DateTimeFormat('en-US', options).format(date);
   }
 
   function fromHTML(html, trim = true) {
@@ -49,7 +59,7 @@ function renderScrapbook(posts) {
   {  
     if (posts[i]) {
       console.log(posts[i]);
-      const post = fromHTML(postForm(posts[i].text, posts[i].attachments));
+      const post = fromHTML(postForm(posts[i].text, posts[i].attachments, posts[i].timestamp));
       postsContainer.appendChild(post);
     }
   }
