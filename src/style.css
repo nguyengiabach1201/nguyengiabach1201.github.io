@@ -70,7 +70,7 @@ i {
   margin-top: 2rem;
 }
 
-.container> p {
+.container> p, audio {
   padding-left: 2rem;
   margin-top: 1rem;
 }
