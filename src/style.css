@@ -1,0 +1,49 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+section {
+  font-family: 'Roboto Mono', Menlo, monospace;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 72px;
+}
+
+p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-bottom: 16px;
+}
+
+.photo-and-name {
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.photo-and-name>img {
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid lightgrey;
+}
+
+section>p>a {
+  margin: 5px;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+i {
+  color: black;
+  font-size: 20px;
+}
