@@ -69,6 +69,12 @@ i {
   border: 1px solid lightgrey;
 }
 
+@media only screen and (max-width: 600px) {
+  .container>#post-container>div {
+    margin: 0.25rem;
+  }
+}
+
 .container>#post-container>div>p>img {
   width: 100%;
   border-radius: 8px;
