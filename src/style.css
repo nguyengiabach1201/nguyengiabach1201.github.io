@@ -12,6 +12,12 @@ section {
   margin-top: 72px;
 }
 
+p {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-bottom: 16px;
+}
+
 .photo-and-name {
   align-items: center;
   margin-bottom: 16px;
