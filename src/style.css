@@ -3,6 +3,16 @@ html {
   width: 100%;
 }
 
-p {
+p,
+h1 {
   font-family: 'Roboto Mono', Menlo, monospace;
+}
+
+.photo-and-name>img {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid lightgrey;
 }
