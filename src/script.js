@@ -1,5 +1,5 @@
 const postsContainer = document.getElementById("post-container");
-const parser = new DOMParser();
+const background = document.getElementById("bg-grid");
 
 fetch('https://scrapbook.hackclub.com/api/users/NguyễnGiaBách')
   .then(response => {
@@ -30,7 +30,7 @@ function renderScrapbook(posts) {
       else if (reactions[i].char)
         emojis += `<p>${reactions[i].char}</p>\n`;
     };
-    
+
     return (
       `<div>
         <h2>${date}</h2>
@@ -64,8 +64,7 @@ function renderScrapbook(posts) {
     return result;
   }
 
-  for (let i = 0; i < 2; i++)
-  {  
+  for (let i = 0; i < 2; i++) {
     if (posts[i]) {
       console.log(posts[i].reactions);
       posts[i].text = posts[i].text.replace("\n", "<br /><br />")
@@ -74,3 +73,9 @@ function renderScrapbook(posts) {
     }
   }
 }
+
+function background() {
+  const color = [];
+}
+
+background();
