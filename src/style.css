@@ -3,7 +3,8 @@ html {
   width: 100%;
 }
 
-section {
+section,
+.container {
   font-family: 'Roboto Mono', Menlo, monospace;
   text-align: center;
   width: 100%;
