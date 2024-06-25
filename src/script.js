@@ -1,5 +1,5 @@
 const postsContainer = document.getElementById("post-container");
-const background = document.getElementById("bg-grid");
+const gridBackground = document.getElementById("bg-grid");
 
 fetch('https://scrapbook.hackclub.com/api/users/NguyễnGiaBách')
   .then(response => {
@@ -99,7 +99,10 @@ function background() {
   ];
 
   colors.forEach(color => {
-    
+    const div = document.createElement("div");
+    div.style.backgroundColor = color;
+    div.style.backgroundColor = "0.5";
+    gridBackground.appendChild(div);
   });
 }
 

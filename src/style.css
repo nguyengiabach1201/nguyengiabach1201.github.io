@@ -12,6 +12,15 @@ html {
   grid-template-columns: repeat(5, 1fr);
 }
 
+#bg-grid>div {
+  margin: 0;
+  height: calc(100vh / 5);
+}
+
+#bg-grid>div:not(:hover) {
+  background-color: white;
+}
+
 .copyright {
   text-align: center;
   padding-bottom: 3px;
