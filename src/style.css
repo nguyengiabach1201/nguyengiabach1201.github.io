@@ -62,13 +62,15 @@ i {
 }
 
 .container>#post-container>div {
-  margin: 3rem;
+  margin: 1.5rem;
   padding: 15px;
   text-align: justify;
   border-radius: 8px;
   border: 1px solid lightgrey;
 }
 
-.container>#post-container>div>img {
-  width: calc(100% - 30px);
+.container>#post-container>div>p>img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid lightgrey;
 }
