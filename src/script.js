@@ -18,6 +18,10 @@ fetch('https://scrapbook.hackclub.com/api/users/NguyễnGiaBách')
 
 function renderScrapbook(posts) {
   console.log(posts, postsContainer);
+  const postForm = () => {
+    return (
+      ``);
+  }
 
   if (posts[0]) {
     console.log(posts[0]);
