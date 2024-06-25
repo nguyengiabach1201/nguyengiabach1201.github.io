@@ -18,17 +18,23 @@ fetch('https://scrapbook.hackclub.com/api/users/NguyễnGiaBách')
 
 function renderScrapbook(posts) {
   console.log(posts, postsContainer);
-  const postForm = () => {
+  const postForm = (text) => {
     return (
-      ``);
+      `<div>
+        <p>${text}<p/>
+      <div/>`
+    );
   }
 
   if (posts[0]) {
+    const post = document.createElement("div");
+    postsContainer.appendChild(post);
     console.log(posts[0]);
   }
 
   if (posts[1]) {
+    const post = document.createElement("div");
+    postsContainer.appendChild(post);
     console.log(posts[1]);
   }
-  // document.write('<html><body><h2>HTML</h2></body></html>');
 }
