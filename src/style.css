@@ -91,15 +91,29 @@ i {
   margin-top: 0;
 }
 
-.container>#post-container>div>p:has(#pic-1) {
+.container>#post-container>div>div:has(#pic-1) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
-.container>#post-container>div>p>img {
+.container>#post-container>div>div>img {
   width: 100%;
   border-radius: 8px;
   border: 1px solid lightgrey;
   margin-bottom: 3px;
+}
+
+.container>#post-container>div>#reactions {
+  display: flex;
+}
+
+.container>#post-container>div>#reactions>p {
+  font-size: 25px;
+  margin: 0;
+}
+
+.container>#post-container>div>#reactions>img {
+  width: 25px;
+  height: 25px;
 }
