@@ -1,6 +1,7 @@
 html {
   height: 100%;
   width: 100%;
+  margin-bottom: 72px;
 }
 
 section,
@@ -49,7 +50,11 @@ i {
   font-size: 20px;
 }
 
-.container>.post-container>div {
+.container>#post-container>div {
   margin: 3rem;
+  padding: 15px;
   width: calc(50% - 6rem);
+  text-align: justify;
+  border-radius: 8px;
+  border: 1px solid lightgrey;
 }

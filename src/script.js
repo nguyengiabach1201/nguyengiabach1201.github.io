@@ -25,7 +25,7 @@ function renderScrapbook(posts) {
   if (posts[0]) {
     console.log(posts[0].text);
     const post = document.createElement("div");
-    post.innerHTML = postForm(posts[0].text.replace("\n", "<br />"));
+    post.innerHTML = postForm(posts[0].text.replace("\n", "<br /><br />"));
     postsContainer.appendChild(post);
 
   }
