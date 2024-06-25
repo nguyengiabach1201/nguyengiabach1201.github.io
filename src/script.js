@@ -1,4 +1,9 @@
+const background = document.getElementById("background");
 
+document.onmousemove = (event) => {
+  event = event || window.event;
+  
+}
 
 const postsContainer = document.getElementById("post-container");
 
