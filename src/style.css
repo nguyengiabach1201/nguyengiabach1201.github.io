@@ -3,8 +3,24 @@ html {
   width: 100%;
 }
 
+body {
+  overflow: hidden;
+}
+
 .blank {
   height: 2rem;
+}
+
+#background {
+  width: 100vw;
+  height: 100vh;
+  
+  margin: 0;
+
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 
 .copyright {

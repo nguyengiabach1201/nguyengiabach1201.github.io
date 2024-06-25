@@ -1,3 +1,5 @@
+
+
 const postsContainer = document.getElementById("post-container");
 
 fetch('https://scrapbook.hackclub.com/api/users/NguyễnGiaBách')
