@@ -97,7 +97,7 @@ i {
   gap: 16px;
 }
 
-.container>#post-container>div>div>img {
+.container>#post-container>div>#imgs>img {
   width: 100%;
   border-radius: 8px;
   border: 1px solid lightgrey;
@@ -106,6 +106,9 @@ i {
 
 .container>#post-container>div>#reactions {
   display: flex;
+
+  position: absolute;
+  bottom: 0;
 }
 
 .container>#post-container>div>#reactions>p {
@@ -116,4 +119,6 @@ i {
 .container>#post-container>div>#reactions>img {
   width: 25px;
   height: 25px;
+  margin: 0;
+  margin-top: 6px;
 }
