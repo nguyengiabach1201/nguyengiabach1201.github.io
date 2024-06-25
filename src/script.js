@@ -100,8 +100,8 @@ function background() {
 
   colors.forEach(color => {
     const div = document.createElement("div");
-    div.style.backgroundColor = color;
-    div.style.backgroundColor = "0.5";
+    // div.style.backgroundColor = color;
+    // div.style.backgroundColor = "0.5";
     gridBackground.appendChild(div);
   });
 }
