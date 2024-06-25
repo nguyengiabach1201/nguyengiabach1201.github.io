@@ -1,8 +1,14 @@
 const background = document.getElementById("background");
 
+const ctx = background.getContext("2d");
+
 document.onmousemove = (event) => {
   event = event || window.event;
-  
+
+  console.log(event.pageX, event.pageY);
+  ctx.arc(event.pageX, event.pageY, 10, 0, 2 * Math.PI);
+  ctx.fillStyle = "red";
+  ctx.fill();
 }
 
 const postsContainer = document.getElementById("post-container");
