@@ -31,9 +31,10 @@ function renderScrapbook(posts) {
   for (let i = 0; i < 2; i++)
   {  
     if (posts[i]) {
-      console.log(posts[i].attachments);
+      console.log(posts[i]);
       const post = document.createElement("div");
-      post.innerHTML = postForm(posts[i].text.replace("\n", "<br /><br />"), posts[i].attachments);
+      posts[i].text = posts[i].text.replace("\n", "<br /><br />");
+      post.innerHTML = postForm(posts[i].text, posts[i].attachments);
       postsContainer.appendChild(post);
     }
   }

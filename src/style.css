@@ -79,6 +79,10 @@ i {
   .container>#post-container {
     display:block;
   }
+  .container>h1 {
+    padding-left: 0rem;
+    text-align: center;
+  }
 }
 
 .container>#post-container>div>p:has(img) {
