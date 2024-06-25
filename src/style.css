@@ -108,7 +108,7 @@ i {
   display: flex;
 
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
 }
 
 .container>#post-container>div>#reactions>p {

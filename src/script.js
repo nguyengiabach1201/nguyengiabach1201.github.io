@@ -36,7 +36,8 @@ function renderScrapbook(posts) {
         <h2>${date}</h2>
         <p>${text}</p>
         <div id="imgs">${imgs}</div>
-        <div id="reactions"><br/>${emojis}<br/></div>
+        <br/><br/>
+        <div id="reactions">${emojis}</div>
       </div>`
     );
   }
