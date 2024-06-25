@@ -140,7 +140,7 @@ i {
 .book {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5px;
+  gap: 10px;
 }
 
 .book>img {
@@ -150,5 +150,11 @@ i {
 }
 
 .book>div {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book>div {
+  text-align: left;
 }
