@@ -1,4 +1,5 @@
 let posts = [];
+const postsContainer = document.getElementById("post-container");
 
 fetch('https://scrapbook.hackclub.com/api/users/NguyễnGiaBách')
   .then(response => {
@@ -16,5 +17,6 @@ fetch('https://scrapbook.hackclub.com/api/users/NguyễnGiaBách')
   });
 
 function renderScrapbook(posts) {
-  console.log(posts);
+  console.log(posts, postsContainer);
+  // document.write('<html><body><h2>HTML</h2></body></html>');
 }
