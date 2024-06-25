@@ -3,9 +3,13 @@ html {
   width: 100%;
 }
 
-p,
-h1 {
+section {
   font-family: 'Roboto Mono', Menlo, monospace;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 72px;
 }
 
 .photo-and-name {
@@ -14,8 +18,8 @@ h1 {
 }
 
 .photo-and-name>img {
-  height: 120px;
-  width: 120px;
+  height: 180px;
+  width: 180px;
   object-fit: cover;
   margin-bottom: 16px;
   border-radius: 8px;
