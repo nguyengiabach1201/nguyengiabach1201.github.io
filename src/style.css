@@ -3,6 +3,10 @@ html {
   width: 100%;
 }
 
+.blank {
+  height: 2rem;
+}
+
 section,
 .container {
   font-family: 'Roboto Mono', Menlo, monospace;
@@ -59,6 +63,11 @@ i {
   padding-left: 2rem;
   margin-bottom: 0;
   margin-top: 2rem;
+}
+
+.container> p {
+  padding-left: 2rem;
+  margin-top: 1rem;
 }
 
 .container>#post-container {
