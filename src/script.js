@@ -16,7 +16,16 @@ function setCanvasSize() {
 }
 setCanvasSize();
 
-window.onresize = setCanvasSize;
+window.onresize = () => {
+  setCanvasSize();
+
+  for (let i = 0; i < dots.length; i++) {
+    ctx.beginPath();
+    ctx.arc(dots[i].x, dots[i].y, dots[i].radius, 0, 2 * Math.PI);
+    ctx.fillStyle = dots[i].color;
+    ctx.fill();
+  }
+};
 
 const dots = [];
 document.onmousemove = (event) => {
