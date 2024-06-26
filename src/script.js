@@ -16,6 +16,8 @@ function setCanvasSize() {
 }
 setCanvasSize();
 
+window.onresize = setCanvasSize;
+
 const dots = [];
 document.onmousemove = (event) => {
   function getRandomColor() {
