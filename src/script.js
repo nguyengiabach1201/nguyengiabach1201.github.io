@@ -1,22 +1,22 @@
 const canvas = document.getElementById("background");
 const ctx = canvas.getContext("2d");
 
-const dpr = window.devicePixelRatio || 2;
+function setCanvasSize() {
+  const dpr = window.devicePixelRatio || 2;
 
-const { width, height } = canvas.getBoundingClientRect();
+  const { width, height } = canvas.getBoundingClientRect();
 
-if (canvas.width !== width * dpr || canvas.height !== height * dpr) {
-  canvas.width = width * dpr;
-  canvas.height = height * dpr;
+  if (canvas.width !== width * dpr || canvas.height !== height * dpr) {
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+  }
+
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.scale(dpr, dpr);
 }
+setCanvasSize();
 
-ctx.setTransform(1, 0, 0, 1, 0, 0);
-ctx.scale(dpr, dpr);
-
-setInterval(() => {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-}, 1000)
-
+const dots = [];
 document.onmousemove = (event) => {
   function getRandomColor() {
     const red = Math.floor(Math.random() * 255);
@@ -25,12 +25,17 @@ document.onmousemove = (event) => {
     return `rgb(${red}, ${green}, ${blue})`;
   }
 
-  console.log(event.x, event.y);
+  dots.push({ x: event.x, y: event.y, radius: Math.random() * 20, color: getRandomColor() });
+  while (dots.length > 20) dots.shift();
 
-  ctx.beginPath();
-  ctx.arc(event.x, event.y, Math.random() * 10, 0, 2 * Math.PI);
-  ctx.fillStyle = getRandomColor();
-  ctx.fill();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  for (let i = 0; i < dots.length; i++) {
+    ctx.beginPath();
+    ctx.arc(dots[i].x, dots[i].y, dots[i].radius, 0, 2 * Math.PI);
+    ctx.fillStyle = dots[i].color;
+    ctx.fill();
+  }
 }
 
 const postsContainer = document.getElementById("post-container");
