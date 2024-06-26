@@ -13,14 +13,23 @@ if (canvas.width !== width * dpr || canvas.height !== height * dpr) {
 ctx.setTransform(1, 0, 0, 1, 0, 0);
 ctx.scale(dpr, dpr);
 
-document.onmousemove = (event) => {
-  event = event || window.event;
+setInterval(() => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}, 1000)
 
-  console.log(event.pageX, event.pageY);
+document.onmousemove = (event) => {
+  function getRandomColor() {
+    const red = Math.floor(Math.random() * 255);
+    const green = Math.floor(Math.random() * 255);
+    const blue = Math.floor(Math.random() * 255);
+    return `rgb(${red}, ${green}, ${blue})`;
+  }
+
+  console.log(event.x, event.y);
 
   ctx.beginPath();
-  ctx.arc(event.pageX, event.pageY, 10, 0, 2 * Math.PI);
-  ctx.fillStyle = "red";
+  ctx.arc(event.x, event.y, Math.random() * 10, 0, 2 * Math.PI);
+  ctx.fillStyle = getRandomColor();
   ctx.fill();
 }
 

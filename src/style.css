@@ -107,6 +107,7 @@ audio {
   border: 1px solid lightgrey;
 
   position: relative;
+  background-color: white;
 }
 
 @media only screen and (max-width: 450px) {
