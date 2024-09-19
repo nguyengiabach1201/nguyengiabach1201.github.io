@@ -123,6 +123,24 @@
   </div>
 
   <div class="container">
+    <h1>Piano</h1>
+    <p>Let make some noise! Click the S key to make a middle C (or C4), then D to make D4 and so on up until B4 with the
+      K key. You can also use your mouse or touchscreen to play it!</p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.52/Tone.js"></script>
+
+    <div id="piano">
+      <span class="key" id="C" onclick="playNote('C')"><strong>C</strong></span>
+      <span class="key" id="D" onclick="playNote('D')"><strong>D</strong></span>
+      <span class="key" id="E" onclick="playNote('E')"><strong>E</strong></span>
+      <span class="key" id="F" onclick="playNote('F')"><strong>F</strong></span>
+      <span class="key" id="G" onclick="playNote('G')"><strong>G</strong></span>
+      <span class="key" id="A" onclick="playNote('A')"><strong>A</strong></span>
+      <span class="key" id="B" onclick="playNote('B')"><strong>B</strong></span>
+    </div>
+  </div>
+
+  <div class="container">
     <h1>Finally</h1>
     <img src="./assets/imgs/background.png" alt="Me">
     <div id="post-container" style="margin-top: 10px;">
