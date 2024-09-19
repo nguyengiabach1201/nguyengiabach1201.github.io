@@ -205,3 +205,29 @@ audio {
 .book>div {
   text-align: left;
 }
+
+/* Piano */
+
+#piano {
+  width: 90%;
+  margin: auto;
+  height: 200px;
+  background: wheat;
+}
+
+.key {
+  height: 100px;
+  width: auto;
+  width: calc(14.2857142857% - 5.4px);
+  float: left;
+  border: 5px solid black;
+  border-right: none;
+  background: white;
+  text-align: center;
+  padding-top: 100px;
+  user-select: none;
+}
+
+#B {
+  border-right: 5px solid black;
+}
