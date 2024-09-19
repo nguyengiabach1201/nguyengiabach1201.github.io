@@ -212,13 +212,13 @@ audio {
   width: 90%;
   margin: auto;
   height: 200px;
-  background: wheat;
+  /* background: wheat; */
 }
 
 .key {
   height: 100px;
   width: auto;
-  width: calc(14.2857142857% - 5.4px);
+  width: calc(14.2857142857% - 6px);
   float: left;
   border: 5px solid black;
   border-right: none;
