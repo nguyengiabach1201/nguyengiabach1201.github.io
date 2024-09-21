@@ -115,14 +115,14 @@ audio {
   margin-top: 1rem;
 }
 
-.container>#post-container {
+.container>.post-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
-.container>#post-container>div {
-  margin: 1.5rem;
+.container>.post-container>div {
+  margin: 0.5rem;
   padding: 15px;
   text-align: justify;
   border-radius: 8px;
@@ -132,13 +132,13 @@ audio {
   background-color: white;
 }
 
-.container>#post-container>img {
+.container>.post-container>img {
   width: 100%;
   border-radius: 8px;
 }
 
 @media only screen and (max-width: 450px) {
-  .container>#post-container {
+  .container>.post-container {
     display: block;
   }
 
@@ -148,36 +148,49 @@ audio {
   }
 }
 
-.container>#post-container>div>h2 {
+@media only screen and (max-width: 815px) {
+  #projects {
+    /* display: flex; */
+    /* justify-content: center; */
+    display: block;
+    text-align: center;
+  }
+
+  #projects>* {
+    margin: 2px;
+  }
+}
+
+.container>.post-container>div>h2 {
   margin-top: 0;
 }
 
-.container>#post-container>div>div:has(#pic-1) {
+.container>.post-container>div>div:has(#pic-1) {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
-.container>#post-container>div>#imgs>img {
+.container>.post-container>div>#imgs>img {
   width: 100%;
   border-radius: 8px;
   border: 1px solid lightgrey;
   margin-bottom: 3px;
 }
 
-.container>#post-container>div>#reactions {
+.container>.post-container>div>#reactions {
   display: flex;
 
   position: absolute;
   bottom: 10px;
 }
 
-.container>#post-container>div>#reactions>p {
+.container>.post-container>div>#reactions>p {
   font-size: 25px;
   margin: 0;
 }
 
-.container>#post-container>div>#reactions>img {
+.container>.post-container>div>#reactions>img {
   width: 25px;
   height: 25px;
   margin: 0;
@@ -211,6 +224,7 @@ audio {
 #piano {
   width: 90%;
   margin: auto;
+  padding-left: 20px;
   height: 200px;
   /* background: wheat; */
 }
@@ -218,7 +232,7 @@ audio {
 .key {
   height: 100px;
   width: auto;
-  width: calc(14.2857142857% - 6px);
+  width: calc(14.2857142857% - 10px);
   float: left;
   border: 5px solid black;
   border-right: none;

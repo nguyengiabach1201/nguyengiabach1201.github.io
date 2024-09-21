@@ -58,7 +58,7 @@ document.onmousemove = (event) => {
 
 // Display latest scrapbook post
 
-const postsContainer = document.getElementById("post-container");
+const postsContainer = document.querySelector(".post-container")
 
 fetch("https://scrapbook.hackclub.com/api/users/NguyễnGiaBách")
     .then((response) => {
@@ -121,7 +121,7 @@ function renderScrapbook(posts) {
         return result;
     }
 
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 4; i++) {
         if (posts[i]) {
             console.log(posts[i].reactions);
             posts[i].text = posts[i].text.replace("\n", "<br /><br />");
