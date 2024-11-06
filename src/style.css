@@ -269,9 +269,7 @@ audio {
   /* Do not invert media (revert the invert). */
   img,
   video,
-  iframe,
-  svg,
-  canvas {
+  iframe {
     filter: invert(100%) hue-rotate(180deg);
   }
 
