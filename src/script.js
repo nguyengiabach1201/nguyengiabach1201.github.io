@@ -58,7 +58,7 @@ document.onmousemove = (event) => {
 
 // Display latest scrapbook post
 
-const postsContainer = document.querySelector(".post-container")
+const postsContainer = document.querySelector(".post-container");
 
 fetch("https://scrapbook.hackclub.com/api/users/NguyễnGiaBách")
     .then((response) => {

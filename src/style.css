@@ -282,11 +282,6 @@ audio {
     filter: none;
   }
 
-  /* Improve contrast on icons. */
-  .icon {
-    filter: invert(15%) hue-rotate(180deg);
-  }
-
   /* Re-enable code block backgrounds. */
   pre {
     filter: invert(6%);
