@@ -75,7 +75,7 @@ fetch("https://scrapbook.hackclub.com/api/users/NguyễnGiaBách")
     });
 
 function renderScrapbook(posts) {
-    console.log(posts, postsContainer);
+    // console.log(posts, postsContainer);
     const postForm = (text, attachments, timestamp, reactions) => {
         let imgs = "";
         for (let i = 0; i < attachments.length; i++) {
@@ -123,7 +123,7 @@ function renderScrapbook(posts) {
 
     for (let i = 0; i < 4; i++) {
         if (posts[i]) {
-            console.log(posts[i].reactions);
+            // console.log(posts[i].reactions);
             posts[i].text = posts[i].text.replace("\n", "<br /><br />");
             const post = fromHTML(
                 postForm(

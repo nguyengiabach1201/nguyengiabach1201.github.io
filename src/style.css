@@ -226,7 +226,6 @@ audio {
   margin: auto;
   padding-left: 20px;
   height: 200px;
-  /* background: wheat; */
 }
 
 .key {
@@ -251,7 +250,7 @@ audio {
 @media (prefers-color-scheme: dark) {
 
   /* Invert all elements on the body while attempting to not alter the hue substantially. */
-  body {
+  body>* {
     filter: invert(100%) hue-rotate(180deg);
   }
 
