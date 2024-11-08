@@ -30,7 +30,8 @@ window.onresize = () => {
 };
 
 const dots = [];
-document.onmousemove = (event) => {
+
+function addDots(x, y) {
     function getRandomColor() {
         const red = Math.floor(Math.random() * 255);
         const green = Math.floor(Math.random() * 255);
@@ -39,8 +40,8 @@ document.onmousemove = (event) => {
     }
 
     dots.push({
-        x: event.x,
-        y: event.y,
+        x: x,
+        y: y,
         radius: Math.random() * 20,
         color: getRandomColor(),
     });
@@ -54,7 +55,11 @@ document.onmousemove = (event) => {
         ctx.fillStyle = dots[i].color;
         ctx.fill();
     }
-};
+}
+
+document.onmousemove = (event) => addDots(event.x, event.y);
+document.ontouchmove = (event) =>
+    addDots(event.touches[0].clientX, event.touches[0].clientY);
 
 // Display latest scrapbook post
 
