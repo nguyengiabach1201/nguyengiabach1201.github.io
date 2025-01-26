@@ -1,4 +1,6 @@
+//
 // Drawing random dots in the background as you move your mouse
+//
 
 const canvas = document.getElementById("background");
 const ctx = canvas.getContext("2d");
@@ -61,7 +63,9 @@ document.onmousemove = (event) => addDots(event.x, event.y);
 document.ontouchmove = (event) =>
     addDots(event.touches[0].clientX, event.touches[0].clientY);
 
+//
 // Display latest scrapbook post
+//
 
 const postsContainer = document.querySelector(".post-container");
 
@@ -80,7 +84,6 @@ fetch("https://scrapbook.hackclub.com/api/users/NguyễnGiaBách")
     });
 
 function renderScrapbook(posts) {
-    // console.log(posts, postsContainer);
     const postForm = (text, attachments, timestamp, reactions) => {
         let imgs = "";
         for (let i = 0; i < attachments.length; i++) {
@@ -126,9 +129,8 @@ function renderScrapbook(posts) {
         return result;
     }
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 6; i++) {
         if (posts[i]) {
-            // console.log(posts[i].reactions);
             posts[i].text = posts[i].text.replace("\n", "<br /><br />");
             const post = fromHTML(
                 postForm(
@@ -143,7 +145,9 @@ function renderScrapbook(posts) {
     }
 }
 
+//
 // Secret Konami code
+//
 
 var allowedKeys = {
     37: "left",
@@ -190,7 +194,9 @@ function activateCheats() {
     alert("Music activated!");
 }
 
+//
 // Piano
+//
 
 Tone.start();
 const synth = new Tone.Synth().toDestination();
