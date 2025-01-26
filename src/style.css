@@ -101,7 +101,8 @@ i {
   margin-top: 2rem;
 }
 
-.container>img {
+.container>img,
+.container>video {
   margin-top: 1rem;
 
   width: 100%;
