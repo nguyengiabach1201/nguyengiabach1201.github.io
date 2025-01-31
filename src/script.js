@@ -1,4 +1,10 @@
 //
+// Display the current year in the copyright
+//
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
+//
 // Drawing random dots in the background as you move your mouse
 //
 
