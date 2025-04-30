@@ -20,7 +20,8 @@
 
     /* Do not invert media (revert the invert). */
     img,
-    video {
+    video,
+    .facebook-post {
         filter: invert(100%) hue-rotate(180deg);
     }
 
